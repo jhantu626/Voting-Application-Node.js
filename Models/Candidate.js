@@ -1,13 +1,14 @@
 const mongoose=require('mongoose')
 
-const candidateSchema=new mongooseSchema({
+const candidateSchema=new mongoose.Schema({
     name: {
-        type: Stiring,
+        type: String,
         required: true
     },
     party: {
         type: String,
-        required: true
+        required: true,
+        enum: ["BJP","TMC","CPIM","CONGRESS","AAP"]
     },
     age: {
         type: Number,
